@@ -9,7 +9,13 @@ import OrderList from "./pages/OrderList";
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello Tshepi</h1>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route
+          path="/progress/:progressId"
+          element={<OrderList orders={orders} />}
+        />
+      </Routes>
     </div>
   );
 }
