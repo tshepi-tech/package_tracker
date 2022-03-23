@@ -11,7 +11,6 @@ export default function ProgressItem({ item }) {
   return (
     <section>
       <h2>progress:{progress}</h2>
-      <h2>progressId:{progressId}</h2>
       <Link to={`/progress/${progressId}`}>View {progress}</Link>
     </section>
   );
