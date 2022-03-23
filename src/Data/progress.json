@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "progress": "Ready for pickup",
+    "progressId": "ready-for-pickup",
+    "progressSmallImage": ""
+  },
+  {
+    "id": 1,
+    "progress": "On the way",
+    "progressId": "on-the-way",
+    "progressSmallImage": ""
+  },
+  {
+    "id": 2,
+    "progress": "Delivered",
+    "progressId": "delivered",
+    "progressSmallImage": ""
+  }
+]
