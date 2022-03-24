@@ -11,12 +11,14 @@ export default function App() {
     fetchOrders();
   }, []);
 
+  //Local state
   const [orders, setOrders] = useState([]);
 
+  //Properties
+  const url = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
+
   const fetchOrders = async () => {
-    const data = await fetch(
-      "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840"
-    );
+    const data = await fetch(url);
 
     const orders = await data.json();
     setOrders(orders);

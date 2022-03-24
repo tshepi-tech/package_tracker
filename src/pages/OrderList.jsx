@@ -11,11 +11,11 @@ export default function OrderList({ orders }) {
   const { progressId } = useParams();
 
   //Properties
-  const orderProgress = progress.find((item) => item.progressId === progressId);
-  console.log("orderProgress", orderProgress);
+  const progressCategory = progress.find(
+    (item) => item.progressId === progressId
+  );
 
   const filteredOrders = orders.filter((item) => item.status === progressId);
-  console.log("filteredorders", filteredOrders);
 
   const Orders = filteredOrders.map((item) => (
     <OrderItem key={item.id} item={item} />
@@ -28,7 +28,7 @@ export default function OrderList({ orders }) {
 
   return (
     <section>
-      <h2>{orderProgress.progress}</h2>
+      <h2>{progressCategory.progress}</h2>
       <div>{Orders}</div>
       <button onClick={() => navigate(-1)}>Go back</button>
     </section>

@@ -2,7 +2,7 @@
 import React from "react";
 
 export default function OrderItem({ item }) {
-  const { eta, id, sender, status } = item;
+  const { eta, sender, status } = item;
 
   return (
     <section>
