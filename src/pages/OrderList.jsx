@@ -28,6 +28,7 @@ export default function OrderList({ orders }) {
 
   return (
     <section>
+      <h2>{orderProgress.progress}</h2>
       <div>{Orders}</div>
       <button onClick={() => navigate(-1)}>Go back</button>
     </section>
