@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import OrderList from "./pages/OrderList";
 import ErrorScreen from "./screens/ErrorScreen";
 import LoadingScreen from "./screens/LoadingScreen";
+import "./styles/styles.css";
 
 export default function App() {
   //Local state

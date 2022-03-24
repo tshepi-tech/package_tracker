@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;500&display=swap");
+
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.App {
+  font-family: "Noto Sans Display", sans-serif;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  background-color: red;
+  height: 100vh;
+}
