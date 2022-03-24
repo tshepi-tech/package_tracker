@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router";
 import Home from "./pages/Home";
 import OrderList from "./pages/OrderList";
 import ErrorScreen from "./screens/ErrorScreen";
+import LoadingScreen from "./screens/LoadingScreen";
 
 export default function App() {
   //Local state
@@ -41,6 +42,7 @@ export default function App() {
           element={<OrderList orders={orders} />}
         />
       </Routes>
+      {status === 0 && <LoadingScreen />}
       {status === 2 && <ErrorScreen />}
     </div>
   );
