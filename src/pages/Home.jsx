@@ -4,6 +4,7 @@ import React from "react";
 //Project Files
 import progress from "../Data/progress.json";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
 import ProgressItem from "../components/ProgressItem";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <section>
       <Header />
+      <Hero />
       <div>{Progress}</div>
     </section>
   );

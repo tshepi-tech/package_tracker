@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <Link to="/">
-      <h1>Instapacket</h1>
+      <h2 className="header">InstaPacket</h2>
     </Link>
   );
 }
