@@ -9,7 +9,16 @@ h1 {
   font-size: 34px;
 }
 
+h2 {
+  font-size: 22px;
+}
+
 h3 {
   font-size: 17px;
   font-weight: bold;
+}
+
+p {
+  font-size: 17px;
+  font-weight: lighter;
 }

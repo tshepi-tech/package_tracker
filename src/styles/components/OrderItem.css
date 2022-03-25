@@ -1,0 +1,26 @@
+.order_box {
+  width: 354px;
+  height: 143px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  margin-bottom: 24px;
+  margin-left: 12px;
+}
+
+.order_box h3 {
+  color: #bfa8bb;
+}
+
+.order_boxTop {
+  border-bottom: 1px solid grey;
+}
+
+.order_boxBottom p {
+  margin-top: 8px;
+}
+
+.order_box p,
+h3 {
+  margin-left: 16px;
+}

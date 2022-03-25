@@ -28,9 +28,12 @@ export default function OrderList({ orders }) {
 
   return (
     <section>
-      <h2>{progressCategory.progress}</h2>
+      <h2 className="orderHeading">My Packages</h2>
+      <h2 className="category">{progressCategory.progress}</h2>
       <div>{Orders}</div>
-      <button onClick={() => navigate(-1)}>Go back</button>
+      <button className="btn_back" onClick={() => navigate(-1)}>
+        Go back
+      </button>
     </section>
   );
 }
