@@ -7,6 +7,8 @@ import Hero from "../components/Hero";
 import ProgressItem from "../components/ProgressItem";
 
 export default function Home() {
+
+  //Properties
   const Progress = progress.map((item) => (
     <ProgressItem key={item.id} item={item} />
   ));
