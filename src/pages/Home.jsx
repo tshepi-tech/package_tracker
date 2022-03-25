@@ -3,7 +3,6 @@ import React from "react";
 
 //Project Files
 import progress from "../Data/progress.json";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ProgressItem from "../components/ProgressItem";
 

@@ -5,7 +5,6 @@
 /*Components*/
 
 @import "./components/Hero.css";
-@import "./components/Header.css";
 @import "./components/OrderItem.css";
 @import "./components/Orderlist.css";
 @import "./components/ProgressItem.css";
