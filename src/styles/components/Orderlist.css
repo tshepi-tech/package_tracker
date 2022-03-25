@@ -31,3 +31,9 @@
     height: 620px;
   }
 }
+
+@media (max-width: 750px) {
+  .orderList img {
+    display: none;
+  }
+}
