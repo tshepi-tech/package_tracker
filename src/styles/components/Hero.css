@@ -5,16 +5,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right, #fff, #fff);
-
+  background-image: url(/src/images/heroMobile.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin-bottom: 16px;
 }
 
 .hero_content {
   width: 356px;
   height: 205px;
   text-align: center;
+  color: white;
 }
-/*background-image: url(../Assets/HeroImage.webp);*/

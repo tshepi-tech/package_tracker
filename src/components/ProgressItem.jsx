@@ -2,13 +2,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//Project files
+import logo from "../images/logo.png";
+
 export default function ProgressItem({ item }) {
-  const { progressId, progress } = item;
+  const { alt, progressId, progress, progressThumbURL } = item;
+
+  // Properties
+  let imageURL = "";
+
+  // Safeguard
+  try {
+    imageURL = require(`../images/${progressThumbURL}`);
+  } catch {
+    imageURL = logo;
+  }
 
   return (
-    <section>
-      <h2>{progress}</h2>
-      <Link to={`/progress/${progressId}`}>View {progress}</Link>
-    </section>
+    <Link className="progress_button" to={`/progress/${progressId}`}>
+      <img src={imageURL} alt={alt} />
+      <h3>{progress}</h3>
+    </Link>
   );
 }
+
+//View {progress}

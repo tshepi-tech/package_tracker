@@ -1,0 +1,21 @@
+.progress_button {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.progress_button img {
+  width: 335px;
+  height: 148px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.progress_button h3 {
+  position: absolute;
+  top: -16px;
+  left: 32px;
+  width: auto;
+}

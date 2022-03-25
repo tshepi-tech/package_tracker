@@ -3,24 +3,28 @@
     "id": 0,
     "progress": "Ready for pickup",
     "progressId": "ready-for-pickup",
-    "progressSmallImage": ""
+    "progressThumbURL": "ready_for_pickupSmall.jpg",
+    "alt": "person walking into open door of apartment with carton boxes with goods from delivery"
   },
   {
     "id": 1,
     "progress": "On the way",
     "progressId": "on-the-way",
-    "progressSmallImage": ""
+    "progressThumbURL": "on_the_waySmall.jpg",
+    "alt": "person standing by vehicle with packages"
   },
   {
     "id": 2,
     "progress": "Order info received",
     "progressId": "order-info-received",
-    "progressSmallImage": ""
+    "progressThumbURL": "order_info_recievedSmall.jpg",
+    "alt": "person standing by computer in warehouse"
   },
   {
     "id": 3,
     "progress": "Delivered",
     "progressId": "delivered",
-    "progressSmallImage": ""
+    "progressThumbURL": "deliveredSmall.jpg",
+    "alt": "package being passed from one person to another"
   }
 ]
