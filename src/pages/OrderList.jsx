@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router";
 //Project Files
 import progress from "../Data/progress.json";
 import OrderItem from "../components/OrderItem";
+import bigImage from "../images/bigImage.jpg";
 
 export default function OrderList({ orders }) {
   const { progressId } = useParams();
@@ -20,6 +21,7 @@ export default function OrderList({ orders }) {
   const Orders = filteredOrders.map((item) => (
     <OrderItem key={item.id} item={item} />
   ));
+  const pageImage = bigImage;
 
   const navigate = useNavigate();
 
@@ -29,11 +31,16 @@ export default function OrderList({ orders }) {
   return (
     <section>
       <h2 className="orderHeading">My Packages</h2>
-      <h2 className="category">{progressCategory.progress}</h2>
-      <div>{Orders}</div>
-      <button className="btn_back" onClick={() => navigate(-1)}>
-        Go back
-      </button>
+      <div className="orderList">
+        <div>
+          <h2 className="category">{progressCategory.progress}</h2>
+          <div>{Orders}</div>
+          <button className="btn_back" onClick={() => navigate(-1)}>
+            Go back
+          </button>
+        </div>
+        <img src={pageImage} />
+      </div>
     </section>
   );
 }
