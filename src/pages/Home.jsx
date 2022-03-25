@@ -14,7 +14,6 @@ export default function Home() {
 
   return (
     <section>
-      <Header />
       <Hero />
       <div>{Progress}</div>
     </section>

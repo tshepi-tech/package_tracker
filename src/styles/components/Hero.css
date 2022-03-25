@@ -18,3 +18,27 @@
   text-align: center;
   color: white;
 }
+
+.hero h1 {
+  animation: fade-in-from-top 1s;
+}
+
+.header {
+  font-family: "Lato", sans-serif;
+  color: #bfa8bb;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+@keyframes fade-in-from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
