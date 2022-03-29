@@ -1,5 +1,6 @@
 //NPM Packages
 import React from "react";
+import Moment from "react-moment";
 
 export default function OrderItem({ item }) {
   const { eta, sender, location_name } = item;
@@ -13,7 +14,9 @@ export default function OrderItem({ item }) {
         <h3>{location_name}</h3>
       </div>
       <div className="order_boxBottom">
-        <p>{eta}</p>
+        <p>
+          <Moment date={eta} format="MMM Do YYYY" />
+        </p>
       </div>
     </section>
   );
