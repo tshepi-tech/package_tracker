@@ -1,6 +1,7 @@
 //NPM Packages
 import React from "react";
 import Moment from "react-moment";
+import { Link } from "react-router-dom";
 
 export default function OrderItem({ item }) {
   const { eta, sender, location_name } = item;
@@ -10,7 +11,7 @@ export default function OrderItem({ item }) {
       <div className="order_boxTop">
         <p>Sender</p>
         <h3>{sender}</h3>
-        <p>Location</p>
+        <Link to="#">Location</Link>
         <h3>{location_name}</h3>
       </div>
       <div className="order_boxBottom">
