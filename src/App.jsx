@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router";
 
 //Project Files
+import Location from "./pages/Location";
 import Home from "./pages/Home";
 import OrderList from "./pages/OrderList";
 import ErrorScreen from "./screens/ErrorScreen";
@@ -41,6 +42,10 @@ export default function App() {
         <Route
           path="/progress/:progressId"
           element={<OrderList orders={orders} />}
+        />
+        <Route
+          path="/location/:parcel_id"
+          element={<Location orders={orders} />}
         />
       </Routes>
       {status === 0 && <LoadingScreen />}
