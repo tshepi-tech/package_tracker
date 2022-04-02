@@ -1,16 +1,21 @@
 // NPM packages
-import { Map as LeafletMap, TileLayer, Marker } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
-export default function Map({ coordinates }) {
-  // Constants
-  const zoomLevel = 15;
-  const mapURL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-  const attribution = `&copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors`;
+export default function Map({ latitude, longitude }) {
+  // Properties
+  const position = [latitude, longitude];
+  const attribution =
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+  const url = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 
   return (
-    <LeafletMap className="map" center={coordinates} zoom={zoomLevel}>
-      <TileLayer url={mapURL} attribution={attribution} />
-      <Marker position={coordinates} />
-    </LeafletMap>
+    <MapContainer center={position} zoom={10}>
+      <TileLayer attribution={attribution} url={url} />
+      <Marker position={position}>
+        <Popup>
+          A pretty CSS3 popup. <br /> Easily customizable.
+        </Popup>
+      </Marker>
+    </MapContainer>
   );
 }
