@@ -15,9 +15,15 @@ export default function Location({ orders }) {
   // Safeguard
   if (order === undefined) return <p>The order {id} is not longer available</p>;
 
+  const {
+    location_coordinate_latitude: latitude,
+    location_coordinate_longitude: longitude,
+  } = order;
+
   return (
     <div>
       <p>{id}</p>
+      <Map coordinates={[latitude, longitude]} />
       {/*  <Map
         latitude={order.location_coordinate_latitude}
         longiture={order.location_coordinate_longitude}
