@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router";
 
 //Project Files
-import Location from "./pages/Location";
+import Location from "./pages/OrderDetail";
 import Home from "./pages/Home";
 import OrderList from "./pages/OrderList";
 import ErrorScreen from "./screens/ErrorScreen";

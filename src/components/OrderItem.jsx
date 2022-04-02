@@ -9,15 +9,13 @@ export default function OrderItem({ item }) {
   return (
     <section className="order_box">
       <div className="order_boxTop">
-        <p>Sender</p>
         <h3>{sender}</h3>
-        <Link to={`/order/${id}`}>Location</Link>
-        <h3>{location_name}</h3>
-      </div>
-      <div className="order_boxBottom">
         <p>
           <Moment date={eta} format="MMM Do YYYY" />
         </p>
+      </div>
+      <div className="order_boxBottom">
+        <Link to={`/order/${id}`}>More information</Link>
       </div>
     </section>
   );
