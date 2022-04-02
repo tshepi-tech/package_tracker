@@ -44,7 +44,9 @@ export default function App() {
           element={<OrderList orders={orders} />}
         />
         <Route
-          path="/location/:parcel_id"
+          /* path="/Location"
+          element={<Location orders={orders} />} */
+          path="/order/:id"
           element={<Location orders={orders} />}
         />
       </Routes>
