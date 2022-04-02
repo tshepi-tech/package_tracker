@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router";
 
 //Project Files
+import backupData from "./Data/backupData";
 import Location from "./pages/OrderDetail";
 import Home from "./pages/Home";
 import OrderList from "./pages/OrderList";
@@ -16,6 +17,7 @@ export default function App() {
   const [status, setStatus] = useState(0); // 0: loading, 1: loaded, 2: error.
 
   //Properties
+  const activeAPI = false;
   const url = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
 
   //Methods
@@ -30,8 +32,13 @@ export default function App() {
       setState(orders);
       setStatus(1);
     } catch (error) {
-      console.error(`Cannot load the todos from ${url}. Error: ${error}`);
-      setStatus(2);
+      if (activeAPI) {
+        setOrders(backupData);
+        setStatus(1);
+      } else {
+        console.error(`Cannot load the todos from ${url}. Error: ${error}`);
+        setStatus(2);
+      }
     }
   }
 
@@ -43,12 +50,7 @@ export default function App() {
           path="/progress/:progressId"
           element={<OrderList orders={orders} />}
         />
-        <Route
-          /* path="/Location"
-          element={<Location orders={orders} />} */
-          path="/order/:id"
-          element={<Location orders={orders} />}
-        />
+        <Route path="/order/:id" element={<Location orders={orders} />} />
       </Routes>
       {status === 0 && <LoadingScreen />}
       {status === 2 && <ErrorScreen />}
