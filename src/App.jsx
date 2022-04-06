@@ -19,7 +19,6 @@ export default function App() {
   const url = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
 
   //Methods
-
   useEffect(() => loadOrders(url, setOrders, setStatus), []);
 
   async function loadOrders(url, setState, setStatus) {
@@ -37,20 +36,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <Routes>
-        {status === 1 && <Route path="/" element={<Home />} />}
-        <Route
-          path="/progress/:progressId"
-          element={<OrderList orders={orders} />}
-        />
-        <Route
-          /* path="/Location"
-          element={<Location orders={orders} />} */
-          path="/order/:id"
-          element={<Location orders={orders} />}
-        />
-      </Routes>
       {status === 0 && <LoadingScreen />}
+      {status === 1 && <Path orders={order} />}
       {status === 2 && <ErrorScreen />}
     </div>
   );
