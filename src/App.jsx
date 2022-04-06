@@ -1,11 +1,8 @@
 //NPM Packages
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router";
 
 //Project Files
-import Location from "./pages/OrderDetail";
-import Home from "./pages/Home";
-import OrderList from "./pages/OrderList";
+import Path from "./components/Path";
 import ErrorScreen from "./screens/ErrorScreen";
 import LoadingScreen from "./screens/LoadingScreen";
 import "./styles/styles.css";
@@ -37,7 +34,7 @@ export default function App() {
   return (
     <div className="App">
       {status === 0 && <LoadingScreen />}
-      {status === 1 && <Path orders={order} />}
+      {status === 1 && <Path orders={orders} />}
       {status === 2 && <ErrorScreen />}
     </div>
   );
