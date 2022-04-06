@@ -9,28 +9,25 @@ import OrderItem from "../components/OrderItem";
 import bigImage from "../images/bigImage.jpg";
 
 export default function OrderList({ orders }) {
-  const { progressId } = useParams();
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   //Properties
-  const progressCategory = progress.find(
-    (item) => item.progressId === progressId
-  );
+  const progressCategory = progress.find((item) => item.progressId === id);
+  const filteredOrders = orders.filter((item) => item.status === id);
+  const pageImage = bigImage;
 
-  const filteredOrders = orders.filter((item) => item.status === progressId);
-
+  // Components
   const Orders = filteredOrders.map((item) => (
     <OrderItem key={item.id} item={item} />
   ));
-  const pageImage = bigImage;
-
-  const navigate = useNavigate();
 
   // Safeguard
   if (progress === undefined) return <Link to="/">Page not found go home</Link>;
 
   return (
     <section>
-      <h2 className="orderHeading">My Packages</h2>
+      <h1 className="orderHeading">My Packages</h1>
       <div className="orderList">
         <div>
           <h2 className="category">{progressCategory.progress}</h2>

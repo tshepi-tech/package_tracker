@@ -25,4 +25,3 @@ export default function ProgressItem({ item }) {
     </Link>
   );
 }
-
